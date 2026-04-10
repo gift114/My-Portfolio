@@ -33,9 +33,9 @@ const Timeline = () => {
         </motion.div>
 
         {loading ? (
-          <div className="timeline__loading">Loading experience...</div>
+          <div className="timeline_loading">Loading experience...</div>
         ) : experiences.length === 0 ? (
-          <div className="timeline__empty">
+          <div className="timeline_empty">
             <p>No experience entries yet. Add some via the admin dashboard.</p>
           </div>
         ) : (
@@ -43,40 +43,40 @@ const Timeline = () => {
             {experiences.map((exp, index) => (
               <motion.div
                 key={exp._id}
-                className="timeline__item"
+                className="timeline_item"
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <div className="timeline__marker">
-                  <div className="timeline__dot" />
-                  {index < experiences.length - 1 && <div className="timeline__line" />}
+                <div className="timeline_marker">
+                  <div className="timeline_dot" />
+                  {index < experiences.length - 1 && <div className="timeline_line" />}
                 </div>
 
-                <div className="timeline__content">
-                  <div className="timeline__header">
+                <div className="timeline_content">
+                  <div className="timeline_header">
                     <div>
-                      <h3 className="timeline__role">{exp.role}</h3>
-                      <div className="timeline__company">
+                      <h3 className="timeline_role">{exp.role}</h3>
+                      <div className="timeline_company">
                         {exp.company}
-                        {exp.location && <span className="timeline__location"> · {exp.location}</span>}
+                        {exp.location && <span className="timeline_location"> · {exp.location}</span>}
                       </div>
                     </div>
-                    <div className="timeline__dates">
-                      <span className={exp.current ? 'timeline__badge-current' : ''}>
+                    <div className="timeline_dates">
+                      <span className={exp.current ? 'timeline_badge-current' : ''}>
                         {exp.current ? 'Current' : ''}
                       </span>
-                      <span className="timeline__period">
+                      <span className="timeline_period">
                         {formatDate(exp.startDate)} — {exp.current ? 'Present' : formatDate(exp.endDate)}
                       </span>
                     </div>
                   </div>
 
-                  <p className="timeline__desc">{exp.description}</p>
+                  <p className="timeline_desc">{exp.description}</p>
 
                   {exp.achievements?.length > 0 && (
-                    <ul className="timeline__achievements">
+                    <ul className="timeline_achievements">
                       {exp.achievements.map((item, i) => (
                         <li key={i}>{item}</li>
                       ))}
@@ -84,9 +84,9 @@ const Timeline = () => {
                   )}
 
                   {exp.techUsed?.length > 0 && (
-                    <div className="timeline__tech">
+                    <div className="timeline_tech">
                       {exp.techUsed.map((tech) => (
-                        <span key={tech} className="timeline__tech-tag">{tech}</span>
+                        <span key={tech} className="timeline_tech-tag">{tech}</span>
                       ))}
                     </div>
                   )}

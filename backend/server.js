@@ -14,6 +14,7 @@ connectDB();
 // Security middleware
 app.use(helmet());
 app.use(morgan('dev'));
+app.set('trust proxy', 1); 
 
 // CORS
 app.use(cors({

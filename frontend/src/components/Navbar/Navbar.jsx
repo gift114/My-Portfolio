@@ -22,19 +22,19 @@ const Navbar = () => {
 
   return (
     <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
-      <div className="navbar__inner container">
-        <a href="#hero" className="navbar__logo">
-          <span className="navbar__logo-bracket">&lt;</span>
+      <div className="navbar_inner container">
+        <a href="#hero" className="navbar_logo">
+          <span className="navbar_logo-bracket">&lt;</span>
           Abdulazeez Hibatullah
-          <span className="navbar__logo-bracket"> /&gt;</span>
+          <span className="navbar_logo-bracket"> /&gt;</span>
         </a>
 
-        <ul className={`navbar__links ${menuOpen ? 'navbar__links--open' : ''}`}>
+        <ul className={`navbar_links ${menuOpen ? 'navbar_links--open' : ''}`}>
           {navLinks.map((link) => (
             <li key={link.label}>
               <a
                 href={link.href}
-                className="navbar__link"
+                className="navbar_link"
                 onClick={() => setMenuOpen(false)}
               >
                 {link.label}
@@ -42,14 +42,14 @@ const Navbar = () => {
             </li>
           ))}
           <li>
-            <a href="#contact" className="btn btn-primary navbar__cta">
+            <a href="#contact" className="btn btn-primary navbar_cta">
               Hire Me
             </a>
           </li>
         </ul>
 
         <button
-          className={`navbar__burger ${menuOpen ? 'navbar__burger--open' : ''}`}
+          className={`navbar_burger ${menuOpen ? 'navbar_burger--open' : ''}`}
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >

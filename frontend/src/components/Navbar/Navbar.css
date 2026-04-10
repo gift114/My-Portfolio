@@ -16,13 +16,13 @@
   padding: 1rem 0;
 }
 
-.navbar__inner {
+.navbar_inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.navbar__logo {
+.navbar_logo {
   font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -30,22 +30,22 @@
   transition: color 0.2s;
 }
 
-.navbar__logo:hover {
+.navbar_logo:hover {
   color: var(--accent);
 }
 
-.navbar__logo-bracket {
+.navbar_logo-bracket {
   color: var(--accent);
 }
 
-.navbar__links {
+.navbar_links {
   display: flex;
   align-items: center;
   gap: 2rem;
   list-style: none;
 }
 
-.navbar__link {
+.navbar_link {
   font-size: 0.875rem;
   font-weight: 500;
   color: var(--text-secondary);
@@ -53,17 +53,17 @@
   letter-spacing: 0.02em;
 }
 
-.navbar__link:hover {
+.navbar_link:hover {
   color: var(--text-primary);
 }
 
-.navbar__cta {
+.navbar_cta {
   padding: 0.5rem 1.25rem;
   font-size: 0.85rem;
 }
 
 /* Burger */
-.navbar__burger {
+.navbar_burger {
   display: none;
   flex-direction: column;
   gap: 5px;
@@ -71,7 +71,7 @@
   cursor: pointer;
 }
 
-.navbar__burger span {
+.navbar_burger span {
   display: block;
   width: 22px;
   height: 2px;
@@ -81,24 +81,24 @@
   transform-origin: center;
 }
 
-.navbar__burger--open span:nth-child(1) {
+.navbar_burger--open span:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
 
-.navbar__burger--open span:nth-child(2) {
+.navbar_burger--open span:nth-child(2) {
   opacity: 0;
 }
 
-.navbar__burger--open span:nth-child(3) {
+.navbar_burger--open span:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
 }
 
 @media (max-width: 768px) {
-  .navbar__burger {
+  .navbar_burger {
     display: flex;
   }
 
-  .navbar__links {
+  .navbar_links {
     position: fixed;
     top: 0;
     right: -100%;
@@ -114,17 +114,17 @@
     transition: right 0.3s ease;
   }
 
-  .navbar__links--open {
+  .navbar_links--open {
     right: 0;
   }
 
-  .navbar__links li {
+  .navbar_links li {
     width: 100%;
     padding: 0.75rem 0;
     border-bottom: 1px solid var(--border);
   }
 
-  .navbar__link {
+  .navbar_link {
     font-size: 1rem;
   }
 }

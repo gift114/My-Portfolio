@@ -1,5 +1,5 @@
-.timeline__loading,
-.timeline__empty {
+.timeline_loading,
+.timeline_empty {
   color: var(--text-secondary);
   text-align: center;
   padding: 3rem 0;
@@ -14,12 +14,12 @@
   gap: 0;
 }
 
-.timeline__item {
+.timeline_item {
   display: flex;
   gap: 1.5rem;
 }
 
-.timeline__marker {
+.timeline_marker {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,7 +27,7 @@
   padding-top: 0.25rem;
 }
 
-.timeline__dot {
+.timeline_dot {
   width: 12px;
   height: 12px;
   background: var(--accent);
@@ -37,7 +37,7 @@
   z-index: 1;
 }
 
-.timeline__line {
+.timeline_line {
   width: 1px;
   flex: 1;
   background: var(--border);
@@ -46,7 +46,7 @@
   min-height: 40px;
 }
 
-.timeline__content {
+.timeline_content {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -56,11 +56,11 @@
   transition: border-color 0.2s;
 }
 
-.timeline__content:hover {
+.timeline_content:hover {
   border-color: var(--border-hover);
 }
 
-.timeline__header {
+.timeline_header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -69,36 +69,36 @@
   flex-wrap: wrap;
 }
 
-.timeline__role {
+.timeline_role {
   font-size: 1.05rem;
   font-weight: 700;
   margin-bottom: 0.25rem;
 }
 
-.timeline__company {
+.timeline_company {
   font-size: 0.875rem;
   color: var(--accent);
   font-weight: 500;
 }
 
-.timeline__location {
+.timeline_location {
   color: var(--text-secondary);
   font-weight: 400;
 }
 
-.timeline__dates {
+.timeline_dates {
   text-align: right;
   flex-shrink: 0;
 }
 
-.timeline__period {
+.timeline_period {
   font-family: var(--font-mono);
   font-size: 0.75rem;
   color: var(--text-muted);
   display: block;
 }
 
-.timeline__badge-current {
+.timeline_badge-current {
   font-family: var(--font-mono);
   font-size: 0.65rem;
   padding: 0.15rem 0.5rem;
@@ -110,19 +110,19 @@
   display: inline-block;
 }
 
-.timeline__desc {
+.timeline_desc {
   font-size: 0.875rem;
   color: var(--text-secondary);
   line-height: 1.7;
   margin-bottom: 1rem;
 }
 
-.timeline__achievements {
+.timeline_achievements {
   list-style: none;
   margin-bottom: 1rem;
 }
 
-.timeline__achievements li {
+.timeline_achievements li {
   font-size: 0.85rem;
   color: var(--text-secondary);
   padding: 0.25rem 0;
@@ -130,7 +130,7 @@
   position: relative;
 }
 
-.timeline__achievements li::before {
+.timeline_achievements li::before {
   content: '›';
   position: absolute;
   left: 0;
@@ -138,13 +138,13 @@
   font-weight: 700;
 }
 
-.timeline__tech {
+.timeline_tech {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
 }
 
-.timeline__tech-tag {
+.timeline_tech-tag {
   font-family: var(--font-mono);
   font-size: 0.7rem;
   padding: 0.2rem 0.6rem;
@@ -155,11 +155,11 @@
 }
 
 @media (max-width: 600px) {
-  .timeline__header {
+  .timeline_header {
     flex-direction: column;
   }
 
-  .timeline__dates {
+  .timeline_dates {
     text-align: left;
   }
 }

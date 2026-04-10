@@ -43,24 +43,24 @@ const Skills = () => {
         </motion.div>
 
         {loading ? (
-          <div className="skills__loading">Loading skills...</div>
+          <div className="skills_loading">Loading skills...</div>
         ) : Object.keys(grouped).length === 0 ? (
-          <div className="skills__empty">
+          <div className="skills_empty">
             <p>No skills yet. Add some via the admin dashboard.</p>
           </div>
         ) : (
-          <div className="skills__groups">
+          <div className="skills_groups">
             {Object.entries(grouped).map(([category, items], groupIndex) => (
               <motion.div
                 key={category}
-                className="skills__group"
+                className="skills_group"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: groupIndex * 0.1 }}
               >
-                <h3 className="skills__group-title">{CATEGORY_LABELS[category] || category}</h3>
-                <div className="skills__list">
+                <h3 className="skills_group-title">{CATEGORY_LABELS[category] || category}</h3>
+                <div className="skills_list">
                   {items.map((skill, i) => (
                     <motion.div
                       key={skill._id}
@@ -70,13 +70,13 @@ const Skills = () => {
                       viewport={{ once: true }}
                       transition={{ duration: 0.4, delay: i * 0.05 }}
                     >
-                      <div className="skill-item__header">
-                        <span className="skill-item__name">{skill.name}</span>
-                        <span className="skill-item__level">{skill.level}%</span>
+                      <div className="skill-item_header">
+                        <span className="skill-item_name">{skill.name}</span>
+                        <span className="skill-item_level">{skill.level}%</span>
                       </div>
-                      <div className="skill-item__bar">
+                      <div className="skill-item_bar">
                         <motion.div
-                          className="skill-item__fill"
+                          className="skill-item_fill"
                           initial={{ width: 0 }}
                           whileInView={{ width: `${skill.level}%` }}
                           viewport={{ once: true }}
