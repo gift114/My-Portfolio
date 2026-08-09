@@ -1,4 +1,4 @@
-const BASE_URL = '/api';
+const BASE_URL = process.env.REACT_APP_API_URL || '/api';
 
 // ── Core fetch wrapper ──────────────────────────────────────────────────────
 // Attaches the JWT token automatically, parses JSON, and throws on non-2xx.
