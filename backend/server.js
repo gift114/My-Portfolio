@@ -18,9 +18,18 @@ app.set('trust proxy', 1);
 
 // CORS
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'http://localhost:3000',
+  origin: [
+    'https://my-portfolio-peach-nine-25.vercel.app',
+    'http://localhost:3000',
+    'http://localhost:5173',
+    process.env.CLIENT_URL
+  ].filter(Boolean),
   credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
+
+app.options('*', cors());
 
 // Body parser
 app.use(express.json({ limit: '10kb' }));
