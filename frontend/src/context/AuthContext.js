@@ -2,12 +2,14 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 
 const AuthContext = createContext(null);
 
+const BASE_URL = process.env.REACT_APP_API_URL || '/api';
+
 // Thin fetch helper used only inside this file
 const apiFetch = async (method, path, { body, token } = {}) => {
   const headers = { 'Content-Type': 'application/json' };
   if (token) headers['Authorization'] = `Bearer ${token}`;
 
-  const res = await fetch(`/api${path}`, {
+  const res = await fetch(`${BASE_URL}${path}`, {
     method,
     headers,
     body: body ? JSON.stringify(body) : undefined,
